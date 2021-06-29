@@ -1,3 +1,11 @@
+/**
+ * @project        frontend-mentor-challenge
+ * @author         David Maillard, <maillard.david23@gmail.com>
+ * @build          Tue, Jun 29, 2021 9:33 AM ET
+ * @release        d932e8c4c910cb45516e4a0988220afcb135f6b4 [master]
+ * @copyright      Copyright (c) 2021, REPLACE_ME
+ *
+ */
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 * {
   box-sizing: border-box; }
@@ -24,9 +32,26 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: stretch;
-  align-items: stretch; }
+  align-items: stretch;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
   .faq-container .illustration-side {
-    width: 50%; }
+    position: relative;
+    width: 42%;
+    background-image: url("../images/illustration-woman-online-desktop.svg"), url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: right center, right bottom -141px;
+    background-size: 121% auto, 248% auto; }
+    .faq-container .illustration-side:before {
+      content: '';
+      position: absolute;
+      width: 49%;
+      height: 47%;
+      left: 0;
+      top: 50%;
+      -ms-transform: translate(-49%, -28%);
+      transform: translate(-49%, -28%);
+      background: url("../images/illustration-box-desktop.svg") no-repeat center center/contain; }
   .faq-container .content-side {
     width: 50%;
     display: -ms-flexbox;
@@ -79,7 +104,7 @@ body {
           line-height: 14px;
           color: #4B4C5F;
           margin: 0;
-          padding-right: 16px;
+          padding-right: 32px;
           cursor: pointer;
           transition: font-weight ease-out .2s, color ease-out .2s;
           will-change: font-weight, color; }
@@ -87,7 +112,7 @@ body {
             content: '';
             position: absolute;
             top: 50%;
-            right: 0;
+            right: 16px;
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             width: 8px;

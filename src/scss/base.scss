@@ -22,9 +22,26 @@ body {
   border-radius: 23px;
   display: flex;
   align-items: stretch;
+  justify-content: space-between;
 
   .illustration-side {
-    width: 50%;
+    position: relative;
+    width: 42%;
+    background-image: url('../images/illustration-woman-online-desktop.svg'), url('../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: right center, right bottom -141px;
+    background-size: 121% auto, 248% auto;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 49%;
+      height: 47%;
+      left: 0;
+      top: 50%;
+      transform: translate(-49%, -28%);
+      background: url('../images/illustration-box-desktop.svg') no-repeat center center / contain;
+    }
   }
 
   .content-side {
@@ -87,7 +104,7 @@ body {
           line-height: 14px;
           color: #4B4C5F;
           margin: 0;
-          padding-right: 16px;
+          padding-right: 32px;
           cursor: pointer;
           transition: font-weight ease-out .2s, color ease-out .2s;
           will-change: font-weight, color;
@@ -96,7 +113,7 @@ body {
             content: '';
             position: absolute;
             top: 50%;
-            right: 0;
+            right: 16px;
             transform: translateY(-50%);
             width: 8px;
             height: 4px;
