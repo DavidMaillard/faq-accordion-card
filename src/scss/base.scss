@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $fontKumbh;
+  margin: 0;
+  background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+  padding: 40px 24px 85px;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 920px;
+  //min-height: 509px;
+  background: #FFFFFF;
+  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+  border-radius: 23px;
+  display: flex;
+  align-items: stretch;
+
+  .illustration-side {
+    width: 50%;
+  }
+
+  .content-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 65px 6.5vw 83px 0;
+
+    .content-heading {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 32px;
+      color: #1E1F36;
+      margin: 0 0 43px;
+    }
+
+    .faq-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .faq-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #E8E8EA;
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.is-active {
+          .faq-question {
+            font-weight: bold;
+
+            &:after {
+              transform: translateY(-50%) rotate(180deg);
+            }
+          }
+
+          .faq-answer {
+            display: block;
+          }
+        }
+
+        &:not(.is-active) .faq-question:hover {
+          color: #F47B56;
+        }
+
+        .faq-question {
+          position: relative;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 14px;
+          color: #4B4C5F;
+          margin: 0;
+          padding-right: 16px;
+          cursor: pointer;
+          transition: font-weight ease-out .2s, color ease-out .2s;
+          will-change: font-weight, color;
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 4px;
+            background: url('../images/icon-arrow-down.svg') no-repeat right center / contain;
+            transition: transform ease-out .2s;
+            will-change: transform;
+          }
+        }
+
+        .faq-answer {
+          display: none;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 18px;
+          color: #787887;
+          margin: 11px 0 0;
+        }
+      }
+    }
+  }
+}
