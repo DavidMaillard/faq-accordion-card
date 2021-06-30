@@ -1,8 +1,8 @@
 /**
  * @project        frontend-mentor-challenge
  * @author         David Maillard, <maillard.david23@gmail.com>
- * @build          Tue, Jun 29, 2021 9:33 AM ET
- * @release        d932e8c4c910cb45516e4a0988220afcb135f6b4 [master]
+ * @build          Wed, Jun 30, 2021 5:06 PM ET
+ * @release        9231ac727cdc7c9923d45fb97c8c495f1132bae3 [master]
  * @copyright      Copyright (c) 2021, REPLACE_ME
  *
  */
@@ -22,6 +22,9 @@ body {
   margin: 0;
   background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
   padding: 40px 24px 85px; }
+  @media (max-width: 720px) {
+    body {
+      padding-top: 148px; } }
 
 .faq-container {
   width: 100%;
@@ -35,6 +38,12 @@ body {
   align-items: stretch;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media (max-width: 720px) {
+    .faq-container {
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-align: center;
+      align-items: center; } }
   .faq-container .illustration-side {
     position: relative;
     width: 42%;
@@ -42,7 +51,7 @@ body {
     background-repeat: no-repeat;
     background-position: right center, right bottom -141px;
     background-size: 121% auto, 248% auto; }
-    .faq-container .illustration-side:before {
+    .faq-container .illustration-side:after {
       content: '';
       position: absolute;
       width: 49%;
@@ -52,6 +61,30 @@ body {
       -ms-transform: translate(-49%, -28%);
       transform: translate(-49%, -28%);
       background: url("../images/illustration-box-desktop.svg") no-repeat center center/contain; }
+    @media (max-width: 720px) {
+      .faq-container .illustration-side {
+        width: 100%;
+        height: 104px;
+        margin-bottom: 28px;
+        background: url("../images/bg-pattern-mobile.svg") no-repeat center top/auto 100%; }
+        .faq-container .illustration-side:before {
+          content: '';
+          position: absolute;
+          width: 237px;
+          height: 180px;
+          left: 50%;
+          top: -108px;
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background: url("../images/illustration-woman-online-mobile.svg") no-repeat bottom center/100% auto; }
+        .faq-container .illustration-side:after {
+          width: 45px;
+          height: 53px;
+          left: calc(50% - 78px);
+          top: -40px;
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background-image: url("../images/illustration-box-mobile.svg"); } }
   .faq-container .content-side {
     width: 50%;
     display: -ms-flexbox;
@@ -63,13 +96,22 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     padding: 65px 6.5vw 83px 0; }
+    @media (max-width: 720px) {
+      .faq-container .content-side {
+        width: 100%;
+        padding: 0 24px 48px; } }
     .faq-container .content-side .content-heading {
+      width: 100%;
       font-style: normal;
       font-weight: bold;
       font-size: 32px;
       line-height: 32px;
       color: #1E1F36;
       margin: 0 0 43px; }
+      @media (max-width: 720px) {
+        .faq-container .content-side .content-heading {
+          text-align: center;
+          margin-bottom: 38px; } }
     .faq-container .content-side .faq-list {
       width: 100%;
       display: -ms-flexbox;
